@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ubuntu:
+    build: ./ubuntu
+    container_name: ubuntu
+    tty: true
+    privileged: true
+    command: /sbin/init
+    volumes:
+      - ubuntu_store:/data
+
+volumes:
+  ubuntu_store:
